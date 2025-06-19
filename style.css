@@ -1,0 +1,31 @@
+body{
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    background-color: rgb(255, 0, 0);
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+header{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(55, 41, 253));
+    border-radius: 1rem;
+}
+
+.nav-links li{
+   display: inline-block;
+   color: white;
+   font-size: 1.5rem;
+   margin: 1rem;
+}
