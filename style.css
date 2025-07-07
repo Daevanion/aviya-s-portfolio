@@ -1,8 +1,12 @@
+*{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body{
     text-align: center;
     font-family: 'Recta-Bold';
     background-color: rgb(0, 0, 0);
-    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar{
@@ -38,10 +42,10 @@ nav{
     background-color: black;
 }
 
-.nav-links li{
+.nav-links .reg-li{
    display: inline-block;
    color: white;
-   padding: 1rem;
+   padding: 0.2rem;
    font-size: 1rem;
    margin: 1rem;
    transition: .2s  ease-in-out;
@@ -53,12 +57,31 @@ nav{
 
 #contact-me{
     margin-left: 20%;
+    display: inline-block;
+    color: white;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+    transition: .2s  ease-in-out;
+}
+
+#contact-me:hover{
+    color: red;
 }
 
 #menu-icon{
-   font-size: 2rem;
-   display: none;
-   color: white;
+    display: none;
+    font-size: 2rem;
+    color: white;
+    z-index: 2;
+}
+
+.social-links{
+    display: inline-block;
+    color: white;
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transition: .2s  ease-in-out
 }
 
 video{
@@ -72,33 +95,81 @@ video:hover{
 }
 
 .socials{
+    color: rgb(255, 255, 255);
+}
+
+.about {
+    justify-content: center;
     color: white;
+    display: flex;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+.text h1{
+    font-size: 5rem;
+}
+
+.text span{
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.btrn-group{
+    margin-top: 1rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    align-items: center;
+
+
+}
+
+.btn{
+    color: rgb(255, 255, 255);
+    transition: .2s ease-in-out;
+    border: 2px dotted rgba(255, 255, 255, 0.377);
+    border-radius: 1rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    padding: 0.6rem;
+}
+
+.btn:hover{
+    color: rgb(255, 29, 29);
+    transform: scale(1.02);
+    border: 2px solid rgb(255, 255, 255);
 }
 
 
 @media(max-width:600px){
-   header #menu-icon{
-      display: inline-block;
+    #menu-icon{
+      display: block;
+      cursor: pointer;
    }
    .nav-links{
       position: absolute;
-      top: 100%;
-      margin-top: 1rem;
-      width: 100%;
-      padding: 1rem;
+      margin-top: 2rem;
+      margin: 2rem;
+      width: 50%;
       color: white;
-      display:flex;
+      display: inline-block;
       flex-direction: column;
       text-align: center;
-      background: rgba(0,0,0,0.8);
-      border-radius: 3rem;
+      background: rgba(0, 0, 0, 0.5);
       display: none;
+      z-index: 4;
    }
    .nav-links li{
       margin-top: 1.5rem;
       padding: 1rem;
+      font-size: larger;
    }
    .nav-links.active{
       display: block;
+   }
+
+   video{
+    width: 100vw;
    }
 }
